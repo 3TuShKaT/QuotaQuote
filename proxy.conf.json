@@ -1,0 +1,8 @@
+{
+    "/api": {
+      "target": "https://favqs.com", 
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }

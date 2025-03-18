@@ -1,0 +1,23 @@
+<div class="quote"> 
+    @if (quote) {
+        <h1>{{quote.text}}</h1>
+        <h2>{{quote.author}}</h2>
+
+        <ul class="quote__tags">
+            <li class="quote__tags--li" *ngFor="let tag of quote.tags">{{tag}}</li>
+        </ul>
+    }
+
+    <button (click)="fetchQuote()">Get Quote</button>
+    <button (click)="addBook(testBook)">Add book</button>
+    
+
+    <button (click)="deleteBook(4)">Remove book</button>
+    <button (click)="getUnreadBooks()">Get unread books</button>
+
+    <input type="text" [(ngModel)]="testBook.title" placeholder="Title">
+    <input type="submit" (click)="markAsRead('The Catcher in the Rye')" value="Search" />
+    
+    <input type="text" [(ngModel)]="testBook.author" placeholder="Author">
+    <input type="submit" (click)="getBookByAuthor('J.D. Salinger')" value="Search" />
+</div>
