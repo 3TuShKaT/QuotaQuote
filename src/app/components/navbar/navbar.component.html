@@ -1,0 +1,91 @@
+<nav class="navbar">
+  <div class="navbar__container">
+    <div class="navbar__social-links">
+      <div class="navbar__social-links__policy">
+        <a href="#">Roasting Monday & Thursday</a>
+      </div>
+      <div class="navbar__social-links__links">
+        <a href="#" class="navbar__social-links__links--item"
+          ><i class="fab fa-instagram">I</i></a
+        >
+      </div>
+    </div>
+    <div class="navbar__menu">
+      <div class="navbar__menu__search">
+        <input
+          type="text"
+          placeholder="Search"
+          class="navbar__menu__search__input"
+        />
+        <button class="navbar__menu__search__button">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      <div class="navbar__menu--logo">
+        <img src="regent-coffee-logo.png" alt="coffee-logo" />
+      </div>
+      <div class="navbar__menu__controll">
+        <div class="navbar__menu__controll--item">
+          <i class="fas fa-user"></i>
+          <span>Account</span>
+        </div>
+        <div class="navbar__menu__controll--item">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Cart</span>
+        </div>
+      </div>
+    </div>
+    <div class="navbar__links">
+      <div class="navbar__links__list">
+        <app-accordion
+          title="Our Coffee"
+          class="navbar__links__list--item accordion"
+          id="our-coffee"
+          [isOpen]="openDropdownId === 'our-coffee'"
+          (toggle)="toggleDropdown($event)"
+        >
+          <span class="accordion--item"> Single Origin </span>
+          <span class="accordion--item"> Barrel Aged </span>
+          <span class="accordion--item"> Signature Blend </span>
+          <span class="accordion--item"> Ready Brew Pouches </span>
+        </app-accordion>
+        <app-accordion
+          title="Subscriptions"
+          class="navbar__links__list--item accordion"
+          id="subscriptions"
+          [isOpen]="openDropdownId === 'subscriptions'"
+          (toggle)="toggleDropdown($event)"
+        >
+          <span class="accordion--item"> Roaster's Choise: Classic Duo </span>
+          <span class="accordion--item">
+            Roaster's Choise: Tasting Quartet
+          </span>
+          <span class="accordion--item">
+            Roaster's Choise: Pour Over Packs
+          </span>
+          <span class="accordion--item"> Cold Brew Bottles </span>
+          <span class="accordion--item"> Signature Blend </span>
+          <span class="accordion--item"> EEP </span>
+        </app-accordion>
+        <div class="navbar__links__list--item">
+          <p>Brew Solutions</p>
+        </div>
+        <div class="navbar__links__list--item">
+          <p>Cold Brew</p>
+        </div>
+        <app-accordion
+          title="Gear"
+          class="navbar__links__list--item accordion"
+          id="gear"
+          [isOpen]="openDropdownId === 'gear'"
+          (toggle)="toggleDropdown($event)"
+        >
+          <span class="accordion--item"> Regent Selects </span>
+          <span class="accordion--item"> Pure Over </span>
+          <span class="accordion--item"> Saint Anthony Industries </span>
+          <span class="accordion--item"> Art & Sip Merchandise</span>
+        </app-accordion>
+      </div>
+    </div>
+  </div>
+</nav>

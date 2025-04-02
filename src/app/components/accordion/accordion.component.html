@@ -1,0 +1,31 @@
+<div class="dropdown" (click)="toggleDropdown()">
+  <button
+    class="dropdown--toggle"
+    type="button"
+    [class.show]="isOpen"
+    [attr.aria-expanded]="isOpen"
+  >
+    {{ title }}
+    <i>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        focusable="false"
+        role="presentation"
+        class="icon icon--wide icon-chevron-down icon--line"
+        viewBox="0 0 28 16"
+        width="10"
+        height="10"
+      >
+        <path
+          fill="none"
+          stroke="currentColor"
+          d="m1.57 1.59 12.76 12.77L27.1 1.59"
+        ></path>
+      </svg>
+    </i>
+  </button>
+  <ul class="dropdown--menu" [class.show]="isOpen">
+    <ng-content></ng-content>
+  </ul>
+</div>

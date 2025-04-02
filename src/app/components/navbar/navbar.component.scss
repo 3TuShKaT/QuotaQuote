@@ -1,0 +1,142 @@
+@import "variables";
+
+.navbar {
+  width: 100%;
+  height: auto;
+  font-family: $navbar-font;
+
+  &__social-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0 auto;
+    padding: $page-padding;
+    background-color: $topbar-bg;
+    color: $topbar-text-color;
+
+    &__policy {
+      font-size: 1rem;
+      font-weight: 500;
+      color: $topbar-text-color;
+      text-decoration: underline;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        text-decoration-color: $topbar-bg;
+      }
+    }
+
+    &__links {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      color: aliceblue;
+
+      &--item {
+        font-size: $icon-size;
+        color: $topbar-text-color;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          color: $navbar-hover-color;
+        }
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 auto;
+    padding: $page-padding;
+    padding-top: 1rem;
+    background-color: $navbar-bg;
+    border-bottom: 1px solid $navbar-border-color;
+
+    &--logo {
+      max-width: 14.375rem;
+      height: auto;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+
+    &__search {
+      width: 100%;
+      max-width: 13.75rem;
+      height: 2.5rem;
+
+      &__input {
+        padding: 0.5rem 1rem;
+        border: 1px solid $search-border-color;
+        background-color: $search-bg;
+
+        color: $search-text-color;
+        font-size: 1rem;
+        line-height: 1.4063rem;
+      }
+    }
+
+    &__controll {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      &--item {
+        padding: 0.5rem 1rem;
+        font-size: $navbar-font-size;
+        font-weight: 400;
+        letter-spacing: 3px;
+        color: $navbar-text-color;
+        font-family: $font-montserrat;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  // ASAP change links style
+  &__links {
+    padding: $page-padding;
+    padding-bottom: 0;
+    background-color: $navbar-bg;
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      &--item {
+        padding: 1rem 1.25rem 0;
+
+        font-size: $navbar-font-size;
+        font-weight: 400;
+        letter-spacing: 3px;
+        color: $navbar-text-color;
+        font-family: $font-montserrat;
+        text-transform: uppercase;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}
+
+.accordion {
+  &--item {
+    text-transform: capitalize;
+    display: block;
+    padding: 8px 15px;
+    white-space: nowrap;
+    font-size: calc(var(15px) - 1px);
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
