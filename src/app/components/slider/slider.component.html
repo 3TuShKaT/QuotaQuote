@@ -1,0 +1,59 @@
+<div class="carousel">
+  <div
+    class="carousel__slides"
+    [style.transform]="'translateX(-' + activeIndexOfCarousel * 100 + '%)'"
+  >
+    <div
+      class="carousel__slide"
+      *ngFor="let slide of slides; let i = index"
+      [ngClass]="{ odd: i % 2 !== 0 }"
+      (mousedown)="onMouseDown($event)"
+      (mouseup)="onMouseUp($event)"
+    >
+      <ng-container>
+        <div class="carousel__info">
+          <div class="carousel__info__subtitle">
+            <span>{{ slide.subtitle }}</span>
+          </div>
+          <h2 class="carousel__info__title">
+            {{ slide.title }}
+          </h2>
+          <div class="carousel__info__description">
+            <p>{{ slide.description }}</p>
+          </div>
+          <div class="carousel__info__links">
+            <button class="carousel__info__links__button">
+              <!-- Set links here -->
+              {{ slide.linkText }}
+            </button>
+
+            <button
+              class="carousel__info__links__button"
+              *ngIf="slide.linkTextBuy"
+            >
+              <!-- Set links here -->
+              {{ slide.linkTextBuy }}
+            </button>
+          </div>
+        </div></ng-container
+      >
+      <div class="carousel__image">
+        <img
+          [src]="slide.image"
+          alt="Slide image"
+          class="carousel__image__img"
+          draggable="false"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="pagination">
+    <div
+      *ngFor="let slide of slides; let i = index"
+      class="dot"
+      [class.active]="i === activeIndexOfCarousel"
+      (click)="goToSlide(i)"
+    ></div>
+  </div>
+</div>
