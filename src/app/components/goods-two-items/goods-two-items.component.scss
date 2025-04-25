@@ -1,0 +1,111 @@
+@import "variables";
+
+.goods {
+  background-color: $page-bg;
+
+  &__container {
+    padding: 3rem 0;
+    width: 100%;
+    max-width: $page-width-padding;
+    margin: 0 auto;
+  }
+
+  &__content {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0 1rem;
+  }
+
+  &__item {
+    position: relative; // Required for pseudo-element positioning
+    display: flex;
+    flex: 1 1 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+
+    background-size: cover;
+    background-position: center;
+
+    margin: 0 1rem;
+    padding: 30px;
+
+    color: $slider-color;
+    font-family: $font-montserrat;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(232, 232, 225, 0.7); // Adjust opacity and color
+      z-index: 1; // Ensure it appears below the content
+    }
+
+    &-info,
+    &-image {
+      position: relative; // Ensure content appears above the overlay
+      z-index: 2;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      gap: 12px;
+    }
+
+    &-points {
+      gap: 5px;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    &-name {
+      font-size: 1.9rem;
+      font-weight: 400;
+    }
+
+    &-description {
+      font-size: 1.2rem;
+      font-weight: 400;
+      max-width: 80%;
+    }
+
+    &-buy {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: $page-bg;
+      background-color: $slider-color;
+      border-radius: 5px;
+      padding: 10px 0;
+
+      max-width: 30%;
+
+      &:hover {
+        background-color: $navbar-bg;
+        color: $navbar-text-color;
+      }
+    }
+
+    &-image {
+      width: 100%;
+      max-width: 350px;
+      height: auto;
+
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+  }
+}

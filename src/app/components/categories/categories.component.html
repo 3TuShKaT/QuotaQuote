@@ -1,0 +1,16 @@
+<section class="categories">
+  <div class="categories__container">
+    <div class="categories__content">
+      <div
+        *ngFor="let category of categories"
+        class="categories__item"
+        (click)="onCategoryClick(category.name)"
+      >
+        <div class="categories__item-image">
+          <img [src]="category.image" alt="{{ category.name }}" />
+        </div>
+        <div class="categories__item-name">{{ category.name }}</div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,25 @@
+<section class="goods">
+  <div class="goods__container">
+    <div class="goods__content">
+      <div
+        *ngFor="let good of goods"
+        class="goods__item"
+        (click)="onItemClick(good.name)"
+        [ngStyle]="{ 'background-image': 'url(images/background/paper.jpg)' }"
+      >
+        <div class="goods__item-info">
+          <div class="goods__item-points">
+            {{ good.points }} <span class="points">pts.</span>
+          </div>
+          <div class="goods__item-name">{{ good.name }}</div>
+          <div class="goods__item-price">{{ good.price | currency }}</div>
+          <div class="goods__item-description">{{ good.description }}</div>
+          <button class="goods__item-buy">Shop</button>
+        </div>
+        <div class="goods__item-image">
+          <img [src]="good.image" alt="{{ good.name }}" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

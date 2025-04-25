@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SliderComponent } from './components/slider/slider.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { GoodsTwoItemsComponent } from './components/goods-two-items/goods-two-items.component';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +17,8 @@ import { SliderComponent } from './components/slider/slider.component';
     FontAwesomeModule,
     NavbarComponent,
     SliderComponent,
+    CategoriesComponent,
+    GoodsTwoItemsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
