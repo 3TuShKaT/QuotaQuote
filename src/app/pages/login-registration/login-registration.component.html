@@ -1,0 +1,61 @@
+<app-navbar></app-navbar>
+
+<section class="login">
+  <div class="login__container">
+    <div class="login__auth">
+      <div class="auth-form">
+        <form
+          [formGroup]="authForm"
+          (ngSubmit)="onSubmit()"
+          class="auth-form__form"
+        >
+          <div class="auth-form__group">
+            <input
+              type="email"
+              id="email"
+              formControlName="email"
+              class="auth-form__input"
+              placeholder="Email"
+            />
+          </div>
+
+          <div class="auth-form__group">
+            <input
+              type="password"
+              id="password"
+              formControlName="password"
+              class="auth-form__input"
+              placeholder="Пароль"
+            />
+          </div>
+
+          <button type="submit" class="auth-form__button">
+            {{ isLoginMode ? "Увійти" : "Зареєструватися" }}
+          </button>
+        </form>
+      </div>
+
+      <p class="auth-toggle">
+        {{ isLoginMode ? "Немає акаунта?" : "Вже є акаунт?" }}
+        <a
+          href="#"
+          (click)="toggleMode(); $event.preventDefault()"
+          class="auth-toggle__link"
+        >
+          {{ isLoginMode ? "Зареєструватися" : "Увійти" }}
+        </a>
+      </p>
+    </div>
+
+    <div class="login__image">
+      <div class="image-box">
+        <img
+          src="images/login.jpg"
+          alt="Login or Registration"
+          class="image-box__image"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</section>

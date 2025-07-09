@@ -7,6 +7,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SliderComponent } from './components/slider/slider.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { GoodsTwoItemsComponent } from './components/goods-two-items/goods-two-items.component';
+import { LoginRegistrationComponent } from './pages/login-registration/login-registration.component';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +20,7 @@ import { GoodsTwoItemsComponent } from './components/goods-two-items/goods-two-i
     SliderComponent,
     CategoriesComponent,
     GoodsTwoItemsComponent,
+    LoginRegistrationComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
